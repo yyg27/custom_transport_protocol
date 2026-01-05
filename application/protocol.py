@@ -155,7 +155,7 @@ class ApplicationProtocol:
 
 #test code
 if __name__ == "__main__":
-    print("=== Application Protocol Test ===\n")
+    print("### Application Protocol Test ###\n")
     
     #test 1: basic flow without encryption
     print("Test 1: Basic flow (Default mode)")
