@@ -1,15 +1,23 @@
 
 # Custom Transport & Secure Application Protocol
 
-  
+### Project Overview
 
-- Yusuf Yiğit GÜLTEKİN - [2023556458]
+This project implements a complete networking stack from scratch, featuring:
 
-  
+-   **Custom Transport Layer Protocol**: A reliable data transfer protocol with custom header format, stop-and-wait ARQ mechanism, sequence numbers, acknowledgments, and Internet Checksum (RFC 1071) for error detection.
+-   **Custom Application Layer Protocol**: A messaging protocol with multiple message types (HELLO, MSG, MODE_SELECT, etc.), state machine for connection management, and support for four different communication modes.
+-   **Security Features**: AES-128 encryption in CBC mode for secure communications, with automatic key exchange between client and server.
+-   **OBFS (Obfuscation) Support**: HTTPS-based carrier layer that tunnels custom protocol packets through HTTP/HTTPS requests, making network traffic appear as regular web traffic.
+-   **Four Communication Modes**:
+    1.  **Default Mode**: Direct UDP transport, no encryption
+    2.  **Secure Mode**: Direct UDP transport with AES-128 encryption
+    3.  **OBFS Mode**: HTTPS carrier without encryption
+    4.  **Secure OBFS Mode**: HTTPS carrier with AES-128 encryption (maximum security)
+
+The system follows strict layered architecture with clear separation between Application Layer, Transport Layer, and Carrier Layer, ensuring modularity and maintainability.
 
 ----------
-
-  
 
 ## Project Structure
 
